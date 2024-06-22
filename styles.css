@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1c1c1d;
+    color: white;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #1d4ed8;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #1d4ed8;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.blurry-background {
+    background-image: url('img/Fondo.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+#que-es,
+#caracteristicas,
+#programas,
+#como-instalar,
+#sobre-nosotros {
+    margin-top: 80px;
+}
+
+.features-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.slider {
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+    transition: transform 0.5s ease;
+}
+
+.feature {
+    flex: 0 0 100%;
+    padding: 1rem;
+    text-align: center;
+    display: none;
+}
+
+.feature.active {
+    display: block;
+}
+
+.feature img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.prev-arrow,
+.next-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.prev-arrow img,
+.next-arrow img {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+.prev-arrow {
+    left: 10px;
+}
+
+.next-arrow {
+    right: 10px;
+}
+
+.button-wrapper {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.prev,
+.next {
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #1e40af;
+}
+
+.programs {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.box {
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.amd {
+    border: 2px solid red;
+}
+
+.intel {
+    border: 2px solid #00BFFF;
+}
+
+.nvidia {
+    border: 2px solid green;
+}
+
+.blue-box-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #1d4ed8;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.blue-box-link:hover {
+    background-color: #1e40af;
+}
+
+.box h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.box p {
+    margin-bottom: 1rem;
+}
+
+.box button {
+    padding: 0.5rem 1rem;
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.box button:hover {
+    background-color: #1e40af;
+}
+
+.video {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.video iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-section {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.logo-container {
+    flex: 0 0 200px;
+}
+
+.logo-container img {
+    width: 100%;
+    display: block;
+}
+
+.about-content {
+    flex: 1;
+    text-align: left;
+}
+
+.section-title {
+    color: #56648b;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.about-text {
+    color: #ccc;
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.socials a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #1d4ed8;
+}
+
+ol.step-list,
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    background-color: transparent;
+}
+
+ol.step-list li,
+ul li {
+    margin-bottom: 0.5rem;
+    background-color: transparent;
+}
+
+.installation {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.installation-box {
+    padding: 1.5rem;
+    background-color: rgba(192, 157, 157, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    flex: 1 1 300px;
+}
+
+.installation-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.installation-box .download-button {
+    padding: 0.5rem 1rem;
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.installation-box .download-button:hover {
+    background-color: #1e40af;
+}
+
+.install-steps {
+    list-style-type: none;
+    padding-left: 0
+}
